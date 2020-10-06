@@ -99,6 +99,7 @@ exports.start = function (SETUP) {
   const LSC_CHANNEL = SETUP.LSC_CHANNEL;
   const FIRMA_CHANNEL = SETUP.FIRMA_CHANNEL;
   const ORG_CHANNEL = SETUP.ORG_CHANNEL;
+  const PODANIE_LOG_CHANNEL = SETUP.PODANIE_LOG_CHANNEL;
   const prefix = SETUP.PREFIX;
   const UPDATE_TIME = 2500; // in ms
 
