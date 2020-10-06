@@ -94,6 +94,11 @@ exports.start = function (SETUP) {
   const STREAM_CHANNEL = SETUP.STREAM_CHANNEL;
   const tweet_channel = SETUP.tweet_channel;
   const darkweb_channel = SETUP.darkweb_channel;
+  const EMS_CHANNEL = SETUP.EMS_CHANNEL;
+  const LSPD_CHANNEL = SETUP.LSPD_CHANNEL;
+  const LSC_CHANNEL = SETUP.LSC_CHANNEL;
+  const FIRMA_CHANNEL = SETUP.FIRMA_CHANNEL;
+  const ORG_CHANNEL = SETUP.ORG_CHANNEL;
   const prefix = SETUP.PREFIX;
   const UPDATE_TIME = 2500; // in ms
 
@@ -557,6 +562,182 @@ exports.start = function (SETUP) {
             })
             .catch(console.error);
           return message.delete();
+        }
+        if (message.channel.id === EMS_CHANNEL) {
+          let embedUser = new Discord.RichEmbed() 
+            .setAuthor(
+              message.member.nickname
+                ? message.member.nickname
+                : message.author.tag,
+              message.author.displayAvatarURL
+            )
+            .setColor("#EE2971")
+            .setTitle("Podanie")
+            .setDescription(
+              "Twoje podanie zostało wysłane do administracji!"
+            )
+            .setTimestamp(new Date());
+          let embedStaff = new Discord.RichEmbed()
+            .setAuthor(
+              message.member.nickname
+                ? message.member.nickname
+                : message.author.tag,
+              message.author.displayAvatarURL
+            )
+            .setColor("#EE2971")
+            .setTitle(":ambulance: PODANIE DO EMS :ambulance:")
+            .setDescription(message.content)
+            .addField("Kanał:", `${message.channel}`)
+            .addField("Autor:", `${message.author}`)
+            .setTimestamp(new Date());
+          message.channel.send(embedUser).then(null).catch(console.error);
+          bot.channels
+            .get(PODANIE_LOG_CHANNEL)
+            .send(embedStaff)
+            .then(null)
+            .catch(console.error);
+            return message.delete();
+        }
+        //////////////////////////////////////////// LSPD /////////////////////////////////////////////
+        if (message.channel.id === LSPD_CHANNEL) {
+          let embedUser = new Discord.RichEmbed() 
+            .setAuthor(
+              message.member.nickname
+                ? message.member.nickname
+                : message.author.tag,
+              message.author.displayAvatarURL
+            )
+            .setColor("#2C4ED7")
+            .setTitle("Podanie")
+            .setDescription(
+              "Twoje podanie zostało wysłane do administracji!"
+            )
+            .setTimestamp(new Date());
+          let embedStaff = new Discord.RichEmbed()
+            .setAuthor(
+              message.member.nickname
+                ? message.member.nickname
+                : message.author.tag,
+              message.author.displayAvatarURL
+            )
+            .setColor("#2C4ED7")
+            .setTitle(":police_car: PODANIE DO LSPD :police_car:")
+            .setDescription(message.content)
+            .addField("Kanał:", `${message.channel}`)
+            .addField("Autor:", `${message.author}`)
+            .setTimestamp(new Date());
+          message.channel.send(embedUser).then(null).catch(console.error);
+          bot.channels
+            .get(PODANIE_LOG_CHANNEL)
+            .send(embedStaff)
+            .then(null)
+            .catch(console.error);
+            return message.delete();
+        }
+        if (message.channel.id === LSC_CHANNEL) {
+          let embedUser = new Discord.RichEmbed() 
+            .setAuthor(
+              message.member.nickname
+                ? message.member.nickname
+                : message.author.tag,
+              message.author.displayAvatarURL
+            )
+            .setColor("#EB841E")
+            .setTitle("Podanie")
+            .setDescription(
+              "Twoje podanie zostało wysłane do administracji!"
+            )
+            .setTimestamp(new Date());
+          let embedStaff = new Discord.RichEmbed()
+            .setAuthor(
+              message.member.nickname
+                ? message.member.nickname
+                : message.author.tag,
+              message.author.displayAvatarURL
+            )
+            .setColor("#EB841E")
+            .setTitle(":wrench:PODANIE DO LSC:wrench:")
+            .setDescription(message.content)
+            .addField("Kanał:", `${message.channel}`, true)
+            .addField("Autor:", `${message.author}`, true)
+            .setTimestamp(new Date());
+          message.channel.send(embedUser).then(null).catch(console.error);
+          bot.channels
+            .get(PODANIE_LOG_CHANNEL)
+            .send(embedStaff)
+            .then(null)
+            .catch(console.error);
+            return message.delete();
+        }
+        if (message.channel.id === FIRMA_CHANNEL) {
+          let embedUser = new Discord.RichEmbed() 
+            .setAuthor(
+              message.member.nickname
+                ? message.member.nickname
+                : message.author.tag,
+              message.author.displayAvatarURL
+            )
+            .setColor("#EB841E")
+            .setTitle("Podanie")
+            .setDescription(
+              "Twoje podanie zostało wysłane do administracji!"
+            )
+            .setTimestamp(new Date());
+          let embedStaff = new Discord.RichEmbed()
+            .setAuthor(
+              message.member.nickname
+                ? message.member.nickname
+                : message.author.tag,
+              message.author.displayAvatarURL
+            )
+            .setColor("#EB841E")
+            .setTitle(":factory: PODANIE NA FIRMĘ :factory:")
+            .setDescription(message.content)
+            .addField("Kanał:", `${message.channel}`, true)
+            .addField("Autor:", `${message.author}`, true)
+            .setTimestamp(new Date());
+          message.channel.send(embedUser).then(null).catch(console.error);
+          bot.channels
+            .get(PODANIE_LOG_CHANNEL)
+            .send(embedStaff)
+            .then(null)
+            .catch(console.error);
+            return message.delete();
+        }
+        if (message.channel.id === ORG_CHANNEL) {
+          let embedUser = new Discord.RichEmbed() 
+            .setAuthor(
+              message.member.nickname
+                ? message.member.nickname
+                : message.author.tag,
+              message.author.displayAvatarURL
+            )
+            .setColor("#EB841E")
+            .setTitle("Podanie")
+            .setDescription(
+              "Twoje podanie zostało wysłane do administracji!"
+            )
+            .setTimestamp(new Date());
+          let embedStaff = new Discord.RichEmbed()
+            .setAuthor(
+              message.member.nickname
+                ? message.member.nickname
+                : message.author.tag,
+              message.author.displayAvatarURL
+            )
+            .setColor("#EB841E")
+            .setTitle(":knife: PODANIE NA ORGANIZACJĘ :knife:")
+            .setDescription(message.content)
+            .addField("Kanał:", `${message.channel}`, true)
+            .addField("Autor:", `${message.author}`, true)
+            .setTimestamp(new Date());
+          message.channel.send(embedUser).then(null).catch(console.error);
+          bot.channels
+            .get(PODANIE_LOG_CHANNEL)
+            .send(embedStaff)
+            .then(null)
+            .catch(console.error);
+            return message.delete();
         }
       }
     }
