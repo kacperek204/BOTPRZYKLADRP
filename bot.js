@@ -99,6 +99,8 @@ exports.start = function (SETUP) {
   const LSC_CHANNEL = SETUP.LSC_CHANNEL;
   const FIRMA_CHANNEL = SETUP.FIRMA_CHANNEL;
   const ORG_CHANNEL = SETUP.ORG_CHANNEL;
+  const SUP_CHANNEL = SETUP.SUP_CHANNEL;
+  const WL_CHANNEL = SETUP.WL_CHANNEL;
   const PODANIE_LOG_CHANNEL = SETUP.PODANIE_LOG_CHANNEL;
   const prefix = SETUP.PREFIX;
   const UPDATE_TIME = 2500; // in ms
@@ -728,6 +730,76 @@ exports.start = function (SETUP) {
             )
             .setColor("#EB841E")
             .setTitle(":knife: PODANIE NA ORGANIZACJĘ :knife:")
+            .setDescription(message.content)
+            .addField("Kanał:", `${message.channel}`, true)
+            .addField("Autor:", `${message.author}`, true)
+            .setTimestamp(new Date());
+          message.channel.send(embedUser).then(null).catch(console.error);
+          bot.channels
+            .get(PODANIE_LOG_CHANNEL)
+            .send(embedStaff)
+            .then(null)
+            .catch(console.error);
+            return message.delete();
+        }
+        if (message.channel.id === WL_CHANNEL) {
+          let embedUser = new Discord.RichEmbed() 
+            .setAuthor(
+              message.member.nickname
+                ? message.member.nickname
+                : message.author.tag,
+              message.author.displayAvatarURL
+            )
+            .setColor("#EB841E")
+            .setTitle("Podanie")
+            .setDescription(
+              "Twoje podanie zostało wysłane do administracji!"
+            )
+            .setTimestamp(new Date());
+          let embedStaff = new Discord.RichEmbed()
+            .setAuthor(
+              message.member.nickname
+                ? message.member.nickname
+                : message.author.tag,
+              message.author.displayAvatarURL
+            )
+            .setColor("#EB841E")
+            .setTitle("✅ PODANIE NA Wl-CHECKERA ✅")
+            .setDescription(message.content)
+            .addField("Kanał:", `${message.channel}`, true)
+            .addField("Autor:", `${message.author}`, true)
+            .setTimestamp(new Date());
+          message.channel.send(embedUser).then(null).catch(console.error);
+          bot.channels
+            .get(PODANIE_LOG_CHANNEL)
+            .send(embedStaff)
+            .then(null)
+            .catch(console.error);
+            return message.delete();
+        }
+        if (message.channel.id === SUP_CHANNEL) {
+          let embedUser = new Discord.RichEmbed() 
+            .setAuthor(
+              message.member.nickname
+                ? message.member.nickname
+                : message.author.tag,
+              message.author.displayAvatarURL
+            )
+            .setColor("#EB841E")
+            .setTitle("Podanie")
+            .setDescription(
+              "Twoje podanie zostało wysłane do administracji!"
+            )
+            .setTimestamp(new Date());
+          let embedStaff = new Discord.RichEmbed()
+            .setAuthor(
+              message.member.nickname
+                ? message.member.nickname
+                : message.author.tag,
+              message.author.displayAvatarURL
+            )
+            .setColor("#EB841E")
+            .setTitle("🌴 PODANIE NA TRIAL-SUPPORTA 🌴")
             .setDescription(message.content)
             .addField("Kanał:", `${message.channel}`, true)
             .addField("Autor:", `${message.author}`, true)
