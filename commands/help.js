@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
     !otomoto - Możliwość wystawienia swojego auta na sprzedaż
     !say - Pisanie w imieniu bota
     !ip - Ip serwera
-    !strona - Link do anszej strony internetowej
+    !strona - Link do naszej strony internetowej
     `)
     message.channel.send(wiado)
 
