@@ -1,5 +1,4 @@
 const Discord = require("discord.js");
-const { displace } = require("jimp");
 const config = require("../config.json")
 
 
