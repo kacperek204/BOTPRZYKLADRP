@@ -13,7 +13,7 @@ module.exports.run = async (bot, message, args) => {
             max: 1,
         }).then(c => {
             let time = c.first().content;
-            message.channel.bulkDelete(4)
+            message.channel.bulkDelete(3)
             var przerwa = 'Na naszej stronie internetowej prowadzone są prace techniczne'
             var embed = new Discord.RichEmbed()
             .setTitle(przerwa, false)
