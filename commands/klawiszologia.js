@@ -20,6 +20,7 @@ module.exports.run = async(bot, message, args) => {
     F7 – Faktury 
     X – Podnoszenie rąk
     Z – Lista obywateli
+    Y - Ściąganie/Zakładanie ubrań
     
     === **POJAZDY** ===
     
