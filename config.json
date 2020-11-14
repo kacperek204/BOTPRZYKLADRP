@@ -1,7 +1,7 @@
 {
   "PREFIX": "!",
-  "URL_SERVER": "http://51.83.176.98:30120",
-  "SERVER_NAME": "PrzykładRP",
+  "URL_SERVER": "http://62.171.183.115:22023",
+  "SERVER_NAME": "VitalityRP",
   "LOG_LEVEL": "2",
   "BOT_TOKEN": "",
   "CHANNEL_ID": "758244989540106250",

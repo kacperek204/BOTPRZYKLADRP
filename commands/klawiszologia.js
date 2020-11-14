@@ -26,7 +26,7 @@ module.exports.run = async(bot, message, args) => {
     E – Klakson
     Y – Silnik
     U – Kluczyki
-    B – Pasy
+    L – Pasy
     
     === **LSPD, EMS, LSCM** ===
     
@@ -37,6 +37,7 @@ module.exports.run = async(bot, message, args) => {
     
     F6 – Menu Frakcji
     DEL – Tablet Frakcyjny
+    F10 - Panel organizacji
    
     === **DODATKOWE INFORMACJE** ===
     
