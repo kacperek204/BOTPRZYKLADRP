@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 
 module.exports.run = async (bot, message, args) => {
-    var ip = "connect 62.171.183.115:22023"
+    var ip = "connect cfx.re/join/495348"
     var embed = new Discord.RichEmbed()
     .setTitle(ip, false)
     .setColor("0099ff")
