@@ -1,6 +1,6 @@
 {
   "PREFIX": "!",
-  "URL_SERVER": "http://62.171.183.115",
+  "URL_SERVER": "http://62.171.183.115:22023",
   "SERVER_NAME": "VitalityRP",
   "LOG_LEVEL": "2",
   "BOT_TOKEN": "",
