@@ -1,7 +1,7 @@
 {
   "PREFIX": "!",
   "URL_SERVER": "http://62.171.183.115:22023",
-  "SERVER_NAME": "VitalityRP",
+  "SERVER_NAME": "SkullLightRP",
   "LOG_LEVEL": "2",
   "BOT_TOKEN": "",
   "CHANNEL_ID": "784814308802560037",
@@ -23,5 +23,6 @@
   "komendareject": "reject",
   "idkick": "784814310181437453",
   "banid": "784814310181437453",
-  "idwarn": "784814310181437453"
+  "idwarn": "784814310181437453",
+  "rolawyniki":"794902784435945472"
 }

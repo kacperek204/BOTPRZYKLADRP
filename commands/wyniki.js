@@ -6,6 +6,7 @@ module.exports.run = async (bot, message, args) => {
     const filter = response => {
         return response.author.id === message.author.id
     };
+    if (!message.member.roles.find(r => r.name === config.rolawyniki)) return message.channel.send("Nie możesz :laughing: ");
     message.reply("Wl-Checker:").then((w) => {
         message.channel.awaitMessages(filter, {
             max: 1,
